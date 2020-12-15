@@ -1,38 +1,85 @@
-.App {
-  text-align: center;
+input, button, select{
+  outline: none;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.btn{
+  border: none;
+  margin: .3rem;
+  padding: .35rem;
+  font-size: .8rem;
+  cursor: pointer;
+  outline: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container{
+  max-width: 87%;
+  margin: 0 auto;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.btn-dark{
+  background-color: #4d4d4d;
   color: white;
+  transition: all .2s ease-in-out;
+}
+.btn-dark:hover{
+  background-color: #2f363f;
+}
+.btn-white{
+  background-color: #e2e3e5;
+  color: rgb(0, 0, 0);
+  transition: all .2s ease-in-out;
+}
+.btn-white:hover{
+  background-color: #ffffff;
+}
+.btn-yellow{
+  background-color: #e7b615;
+  color: rgb(0, 0, 0);
+  transition: all .2s ease-in-out;
+}
+.btn-yellow:hover{
+  background-color: #c79a05;
+}
+.bar{
+  padding: 1.5rem;
+  background-color: #e7b615;
+  color: rgb(119, 80, 21);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo{
+  font-size: 2rem;
+  color: white;
+  font-weight: 700;
+  text-shadow: 2px 0px 12px rgba(150, 94, 11, 1);
+}
+.primary-list{
+  display: block;
+}
+.search{
+  display: inline-block;
+}
+.search input{
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+  outline: none;
+  padding: .35rem;
+  border: 1px solid #ac8916;
+  padding-left: .65rem;
+  background-color: white;
+  vertical-align: top;
+
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search img{
+  width: .95rem;
+  color: #4d4d4d;
+  padding: .35rem;
+  padding-right: .5rem;
+  background-color: rgb(252, 252, 252);
+  border: 1px solid #ac8916;
+  margin-left: 0;
+  outline: none;
+  border-left: none;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+  vertical-align: top;
 }

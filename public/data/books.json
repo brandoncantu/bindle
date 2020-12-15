@@ -1,0 +1,14 @@
+{
+    "books": [
+        {"id": 0, "rating":4, "title": "Todo", "img": "todo.jpg"},
+        {"id": 1, "rating":5, "title": "Si Pudiera Volver Atras", "img": "sipudiera.jpg"},
+        {"id": 2, "rating":5, "title": "The Shining", "img": "shining.jpg"},
+        {"id": 3, "rating":4, "title": "Rise of Kyoshi", "img": "risekyo.jpg"},
+        {"id": 4, "rating":4, "title": "The Metamorphosis", "img": "metamor.jpg"},
+        {"id": 5, "rating":3, "title": "La Lágrima de Buda", "img": "lagrima.jpg"},
+        {"id": 6, "rating":4, "title": "The Green Mile", "img": "greenmile.jpg"},
+        {"id": 7, "rating":5, "title": "Frankenstein", "img": "franken.jpg"},
+        {"id": 8, "rating":3, "title": "Harry Potter: The Priosioner of Azkaban", "img": "azkaban.jpg"},
+        {"id": 9, "rating":4, "title": "20,000 of submarine language", "img": "20leag.jpg"}
+    ] 
+  }

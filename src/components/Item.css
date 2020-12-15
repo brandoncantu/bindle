@@ -1,0 +1,102 @@
+.blocks {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+  }
+  .blocks .block {
+    position: relative;
+    display: inline-block;
+    width: 150px;
+    height: 250px;
+    margin: .8rem;
+    transform: perspective(600px) rotateX(0deg);
+    transition: transform .3s;
+  }
+  .blocks .block img {
+    width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+  }
+  .blocks .block p {
+    font-size: 1rem;
+    text-align: center;
+    width: calc(100% - 1rem);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin: 0;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    padding-bottom: .4rem;
+    padding-top: 1.3rem;
+    padding-right: .5rem;
+    padding-left: .5rem;
+    text-shadow: 2px 0px 12px rgba(10, 7, 3, 0.863);
+    background: rgb(223,174,10);
+    background: linear-gradient(0deg, rgba(223,174,10,1) 21%, rgba(231,231,231,0) 100%);
+    z-index: 10;
+}
+.blocks .block .overlay .stars {
+    background: transparent;
+    z-index: 11;
+    position: absolute;
+    top: 35%;
+    bottom: 100%;;
+}
+.blocks .block .overlay {
+    position: fixed;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+            justify-content: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    background-color: rgba(255, 187, 0, 0.308);
+    opacity: 0;
+    -webkit-transition: opacity .3s ease;
+    transition: opacity .3s ease;
+    -webkit-transform: translate3d(0, 0, 0);
+}
+  .blocks .block.hover, .blocks .block:hover {
+    -webkit-transform: perspective(600px) rotateX(15deg);
+            transform: perspective(600px) rotateX(15deg);
+    cursor: pointer;
+  }
+  .blocks .block:hover .imgCover{
+    filter: sepia(1) saturate(7) brightness(.9) contrast(.8);
+  }
+  .blocks .block.hover .overlay,.blocks .block:hover .overlay {
+    opacity: 1;
+  }
+  
+  @media only screen and (max-width:480px){
+      .blocks{
+          margin: 1rem auto;
+      }
+      .blocks .block{
+          width: 75px;
+          height: 125px;
+      }
+    .blocks .block img {
+      min-width:  100%;
+      max-height: 100%;
+      object-fit: cover;
+    }
+    .blocks .block p {
+        font-size: .5rem;
+    }
+  }
+  .blocks .block .overlay img {
+      width: 1rem;
+      margin: .15rem;
+      -webkit-box-shadow: 0px 0px 76px 2px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 76px 2px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 76px 2px rgba(0,0,0,0.75);
+  }
