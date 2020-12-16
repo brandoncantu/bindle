@@ -52,12 +52,12 @@ class BookPanel extends Component {
             fontFamily: "Arial"
           };
         return (
-            <div className="detail container">
+            <div className="detail container" style={{height: "calc( 100vh - 100px"}}>
                 <div className="detail-form">
                     <div className="bookCover" style={{backgroundImage: "url(img/covers/" + this.state.img + ")"}}></div>
                     <form onSubmit={this.onSubmit}>
                         <div className="form-group">
-                            <label>ID: <span style={{color: 'black', marginLeft: "1.5rem"}}>{this.props.id}</span></label>
+                            <label>ID: <span style={{color: '#32324e', marginLeft: "1rem"}}>{this.props.id}</span></label>
                         </div>
                         <div className="form-group">
                             <label>Titulo Libro</label>

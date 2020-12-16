@@ -10,6 +10,7 @@ class Lista extends Component {
     render() {
         return (
             <div className="lista container">
+                <h2>Our collection</h2>
                 <div className="blocks">
                     {
                         this.props.items.map(item=> 

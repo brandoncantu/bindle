@@ -36,12 +36,21 @@ class Menu extends Component {
         })
     }
 
+    addBtnText = () => {
+        if(window.innerWidth>480){
+            return "Add new book"
+        }else{ if(window.innerWidth<=480){
+            return "+"
+            }
+        }
+    }
+
     render() {
         return (
             <React.Fragment>
                 <div className="bar">
                     <div className="logo">
-                        {this.props.logo}
+                        <img src="img/logo.png"/>
                     </div>
                     <div className="search">
                         <Search
@@ -49,7 +58,7 @@ class Menu extends Component {
                         />
                     </div>
                     <div className="actions">
-                        <button onClick={this.onAdd} className="btn btn-sec btn-dark">Add new book</button>
+                        <button onClick={this.onAdd} className="btn btn-sec btn-white">{this.addBtnText()}</button>
                     </div>
                 </div>
                 {

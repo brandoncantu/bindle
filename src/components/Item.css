@@ -84,13 +84,27 @@
           width: 75px;
           height: 125px;
       }
-    .blocks .block img {
-      min-width:  100%;
-      max-height: 100%;
-      object-fit: cover;
-    }
-    .blocks .block p {
-        font-size: .5rem;
+      /* .blocks .block img {
+        min-width:  100%;
+        max-height: 100%;
+        object-fit: cover;
+      } */
+      .overlay .stars img {
+        width: .7rem !important;
+        margin: .01rem !important;
+      }
+      .blocks .block p{
+          font-size: .5rem;
+      }
+      .overlay .stars{
+        top: 25% !important;
+      }
+      .detail-form {
+        display: block;
+      }
+      .bookCover {
+        padding: 4rem 1rem;
+        margin: 0 auto;
     }
   }
   .blocks .block .overlay img {

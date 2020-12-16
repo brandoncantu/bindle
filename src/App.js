@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Menu from "./components/Menu";
+import Footer from "./components/Footer";
 
 class App extends Component {
 
@@ -171,16 +172,17 @@ class App extends Component {
     //console.log(items)
     const title = this.removeDiacritics(String(items['title']))
     const img = this.removeDiacritics(String(items['img']))
+    const imgdefault = 'default.jpg'
     const rating = this.removeDiacritics(String(items['rating']))
     //console.log(this.removeDiacritics(items['title']))
     var datos = new FormData();
     datos.append('title', title);
-    datos.append('img', img);
+    datos.append('img', imgdefault);
     datos.append('rating', rating)
     //crear objeto
     const xhr = new XMLHttpRequest();
     //abrir conexion
-    xhr.open('POST', 'http://127.0.0.1/myfiles/bindle_api/includes/models/add_book.php', true);
+    xhr.open('POST', 'https://bindleapi.herokuapp.com/includes/models/add_book.php', true);
     //pasar datos
     xhr.onload = function(){
         if(this.status === 200) {
@@ -205,7 +207,7 @@ class App extends Component {
     //crear objeto
     const xhr = new XMLHttpRequest();
     //abrir conexion
-    xhr.open('POST', 'http://127.0.0.1/myfiles/bindle_api/includes/models/update_book.php', true);
+    xhr.open('POST', 'https://bindleapi.herokuapp.com/includes/models/update_book.php', true);
     //pasar datos
     xhr.onload = function(){
         if(this.status === 200) {
@@ -226,7 +228,7 @@ class App extends Component {
     //crear objeto
     const xhr = new XMLHttpRequest();
     //abrir conexion
-    xhr.open('POST', 'http://127.0.0.1/myfiles/bindle_api/includes/models/delete_book.php', true);
+    xhr.open('POST', 'https://bindleapi.herokuapp.com/includes/models/delete_book.php', true);
     //pasar datos
     xhr.onload = function(){
         if(this.status === 200) {
@@ -268,10 +270,7 @@ class App extends Component {
           onUpdate={this.onUpdate}
           onDelete={this.onDelete}
         />
-        {/* <Lista 
-          items= {this.state.books}
-        /> 
-        SE ELIMINA PARA AGREGAR A MENU, DEPENDIENDO SI EL FORM ESTE ACTIVO O NO SE MOSTRARA*/}
+        <Footer />
       </div>
     );
     }

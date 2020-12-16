@@ -1,6 +1,11 @@
 input, button, select{
   outline: none;
 }
+h2{
+  font-size: 2rem;
+  color: #32324e;
+  text-align: center;
+}
 .btn{
   border: none;
   margin: .3rem;
@@ -22,40 +27,40 @@ input, button, select{
   background-color: #2f363f;
 }
 .btn-white{
-  background-color: #e2e3e5;
-  color: rgb(0, 0, 0);
+  background-color: #32324e;
+  color: rgb(255, 255, 255);
   transition: all .2s ease-in-out;
 }
 .btn-white:hover{
-  background-color: #ffffff;
+  background-color: #383c63;
 }
 .btn-yellow{
-  background-color: #e7b615;
+  background-color: #ecb500;
   color: rgb(0, 0, 0);
   transition: all .2s ease-in-out;
 }
 .btn-yellow:hover{
-  background-color: #c79a05;
+  background-color: #ffc813;
 }
 .bar{
-  padding: 1.5rem;
+  padding: .75rem;
   background-color: #e7b615;
   color: rgb(119, 80, 21);
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.logo{
-  font-size: 2rem;
-  color: white;
-  font-weight: 700;
-  text-shadow: 2px 0px 12px rgba(150, 94, 11, 1);
+.logo img{
+  width: 8rem;
 }
 .primary-list{
   display: block;
 }
 .search{
   display: inline-block;
+  width: 60%;
+  max-width: 60%;
+  text-align: center;
 }
 .search input{
   border-bottom-left-radius: 15px;
@@ -66,7 +71,7 @@ input, button, select{
   padding-left: .65rem;
   background-color: white;
   vertical-align: top;
-
+  max-width: 85%;
 }
 
 .search img{
@@ -82,4 +87,26 @@ input, button, select{
   border-bottom-right-radius: 15px;
   border-top-right-radius: 15px;
   vertical-align: top;
+}
+@media only screen and (max-width:480px){
+  .bar{
+    padding: .8rem;
+  }
+  .logo img{
+    width: 4rem;
+  }
+  .search input{
+    max-width: 65%;
+  }
+}
+footer{
+  padding: .3rem;
+  background-color: #32354e;
+  color: white;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+footer p{
+  top: 100vh;
+  margin: .3rem;
 }

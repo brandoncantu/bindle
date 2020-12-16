@@ -36,19 +36,38 @@
     padding: .5rem 1rem;
 }
 .detail-form{
+    margin-bottom: 2rem;
+    background-color: #888;
     display: flex;
     justify-content: space-evenly;
     padding: 3rem;
-    height: 22rem;
-
 }
 .detail-form form .form-group label{
     color: #e7b615;
     text-shadow: none;
 }
 .bookCover{
-    width: 25%;
+    width: 20%;
+    height: inherit;
     background-size: 100%;
     background-repeat: no-repeat;
     object-fit: cover;
+}
+@media only screen and (max-width:480px){
+    form .form-group label {
+        width: 100%;
+        margin: .3rem auto;
+        text-align: center;
+    }
+    .form-group {
+        text-align: center;
+    }
+    .form-group .input-text{
+        min-width: 75%;
+        max-width: 80%;
+    }
+    .bookCover{
+        height: 0;
+    }
+
 }

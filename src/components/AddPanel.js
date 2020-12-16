@@ -36,7 +36,8 @@ class AddPanel extends Component {
 
     render() {
         return (
-            <div className="add container">
+            <div className="add container" style={{height: "calc( 100vh - 100px"}}>
+                <h2>Add a book</h2>
                 <div className="add-form">
                     <form onSubmit={this.onSubmit}>
                         <div className="form-group">
