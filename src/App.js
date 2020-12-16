@@ -231,7 +231,6 @@ class App extends Component {
     xhr.onload = function(){
         if(this.status === 200) {
           ref.getApi();
-            //console.log((xhr.responseText)); 
             //console.log(JSON.parse(xhr.responseText));
             alert('Book deleted!');
         }
