@@ -32,7 +32,7 @@ class App extends Component {
       .then(res => res.json())
       .then(
         (result) => {
-          console.log(result)
+          //console.log(result)
           this.setState(() =>({
             isLoaded: true,
             books: result.books
